@@ -119,5 +119,23 @@
                                               &trans  &trans  &trans                  &trans                       &trans                         &trans
             >;
         };
+
+        layer_3 {
+            bindings = <
+&none  &bt BT_CLR      &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt POUND NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT NUMBER_5    &mt CARET NUMBER_6  &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0  &mt UNDERSCORE MINUS  &none
+       &bt BT_CLR_ALL  &trans                    &trans                &kp LG(C)           &kp LG(V)            &kp LG(X)               &trans              &kp LEFT_ARROW          &kp UP_ARROW           &kp RIGHT_ARROW                &kp C_VOLUME_UP                 &mt PLUS EQUAL
+       &kp GLOBE       &bt BT_SEL 0              &bt BT_SEL 1          &bt BT_SEL 2        &bt BT_SEL 3         &bt BT_SEL 4            &trans              &trans                  &kp DOWN_ARROW         &trans                         &kp C_VOL_DN                    &kp K_MUTE
+                                                                       &out OUT_TOG        &trans               &trans                  &trans              &trans                  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
     };
 };
