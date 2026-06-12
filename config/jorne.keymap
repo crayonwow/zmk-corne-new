@@ -5,9 +5,7 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 / {
     combos {
@@ -95,46 +93,19 @@
             //                        | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp ESC           &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE     &none
-       &mt CAPSLOCK TAB  &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SINGLE_QUOTE
-       &kp LEFT_SHIFT    &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp CAPSLOCK
-                                       &kp LEFT_COMMAND  &mo 4  &kp SPACE    &kp ENTER  &mo 3  &kp LEFT_ALT
+&none  &kp ESC           &kp Q  &kp W        &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE     &none
+       &mt CAPSLOCK TAB  &kp A  &mt LC(S) S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SINGLE_QUOTE
+       &kp LEFT_SHIFT    &kp Z  &kp X        &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp LEFT_CONTROL
+                                             &kp LEFT_COMMAND  &none  &kp SPACE    &kp ENTER  &mo 1  &kp LEFT_ALT
             >;
         };
 
-        L1 {
+        support {
             bindings = <
-&none  &bt BT_CLR      &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt POUND NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT NUMBER_5    &mt CARET NUMBER_6  &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0  &mt UNDERSCORE MINUS  &none
-       &bt BT_CLR_ALL  &trans                    &trans                &kp LG(C)           &kp LG(V)            &kp LG(X)               &trans              &kp LEFT_ARROW          &kp UP_ARROW           &kp RIGHT_ARROW                &kp C_VOLUME_UP                 &mt PLUS EQUAL
-       &kp GLOBE       &bt BT_SEL 0              &bt BT_SEL 1          &bt BT_SEL 2        &bt BT_SEL 3         &bt BT_SEL 4            &trans              &trans                  &kp DOWN_ARROW         &trans                         &kp C_VOL_DN                    &kp K_MUTE
-                                                                       &out OUT_TOG        &trans               &trans                  &trans              &trans                  &trans
-            >;
-        };
-
-        num {
-            bindings = <
-&none  &mt TILDE GRAVE  &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp KP_PLUS             &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &mt SEMICOLON COLON  &mt QUESTION EXCLAMATION  &kp CARET  &trans  &none
-       &mt PIPE BSLH    &kp SLASH     &kp N4  &kp N5  &kp N6  &mt UNDERSCORE MINUS    &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp HASH             &kp DOLLAR                &trans     &trans
-       &kp EQUAL        &kp NUMBER_0  &kp N1  &kp N2  &kp N3  &mt COMMA KP_DOT        &kp LESS_THAN                &kp GREATER_THAN               &kp PERCENT          &kp AT_SIGN               &trans     &trans
-                                              &trans  &trans  &trans                  &trans                       &trans                         &trans
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&none  &trans                    &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F4 NUMBER_4       &mt F5 NUMBER_5          &mt F6 NUMBER_6  &mt F7 NUMBER_7  &mt F8 NUMBER_8  &mt F9 NUMBER_9  &mt F10 NUMBER_0  &mt F11 MINUS  &none
-       &kp LC(LG(LS(NUMBER_4)))  &kp LS(LG(N5))   &trans           &trans           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp LEFT_ARROW   &kp DOWN_ARROW   &kp UP_ARROW     &kp RIGHT_ARROW  &trans            &mt F12 EQUAL
-       &kp LEFT_SHIFT            &trans           &trans           &trans           &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &trans           &trans           &trans           &trans           &kp BACKSLASH     &none
-                                                                   &trans           &kp LEFT_BRACE        &kp RIGHT_BRACE          &trans           &trans           &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &kp F12
-        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-                                &trans  &trans  &trans    &trans  &trans  &trans
+&none  &mt TILDE GRAVE           &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3   &mt F4 NUMBER_4       &mt F5 NUMBER_5          &mt F6 NUMBER_6  &mt F7 NUMBER_7    &mt F8 NUMBER_8   &mt F9 NUMBER_9  &mt F10 NUMBER_0  &mt F11 MINUS     &none
+       &kp LC(LG(LS(NUMBER_4)))  &kp LS(LG(N5))   &trans           &trans            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp LEFT_ARROW   &kp DOWN_ARROW     &kp UP_ARROW      &kp RIGHT_ARROW  &trans            &mt F12 EQUAL
+       &kp LEFT_SHIFT            &trans           &trans           &trans            &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &trans           &mt END PAGE_DOWN  &mt HOME PAGE_UP  &trans           &kp BACKSLASH     &kp LEFT_CONTROL
+                                                                   &kp LEFT_COMMAND  &none                 &none                    &trans           &trans             &kp LEFT_ALT
             >;
         };
     };
