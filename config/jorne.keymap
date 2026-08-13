@@ -111,10 +111,10 @@
 
         layer_2 {
             bindings = <
-&trans  &trans        &trans  &trans  &trans  &mt K_MUTE C_VOL_DN  &kp C_VOLUME_UP    &trans  &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-        &kp CAPSLOCK  &trans  &trans  &trans  &trans               &trans             &trans  &trans  &trans  &trans  &trans            &trans
-        &trans        &trans  &trans  &trans  &trans               &trans             &trans  &trans  &trans  &trans  &trans            &trans
-                                      &trans  &trans               &trans             &trans  &trans  &trans
+&trans  &trans        &trans  &trans  &trans  &mt K_MUTE C_VOL_DN  &kp C_VOLUME_UP    &trans  &trans     &trans     &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+        &kp CAPSLOCK  &trans  &trans  &trans  &trans               &trans             &trans  &kp COLON  &kp EQUAL  &trans  &trans            &trans
+        &trans        &trans  &trans  &trans  &trans               &trans             &trans  &trans     &trans     &trans  &trans            &trans
+                                      &trans  &trans               &trans             &trans  &trans     &trans
             >;
         };
     };
