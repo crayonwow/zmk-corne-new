@@ -12,15 +12,15 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_game {
-            bindings = <&tog 0>;
-            key-positions = <38 43>;
+        layer3 {
+            bindings = <&tog 3>;
+            key-positions = <39 42>;
             timeout-ms = <200>;
         };
 
-        game_esc {
-            bindings = <&kp ESC>;
-            key-positions = <2 3>;
+        layer_alt {
+            bindings = <&tog 4>;
+            key-positions = <38 39>;
         };
     };
 
@@ -103,19 +103,46 @@
 
         support {
             bindings = <
-&none  &mt TILDE GRAVE  &mt F1 NUMBER_1       &mt F2 NUMBER_2           &mt F3 NUMBER_3     &mt F4 NUMBER_4       &mt F5 NUMBER_5          &mt F6 NUMBER_6  &mt F7 NUMBER_7    &mt F8 NUMBER_8   &mt F9 NUMBER_9  &mt F10 NUMBER_0  &mt F11 MINUS  &none
-       &trans           &kp LS(LG(NUMBER_3))  &kp LG(LC(LS(NUMBER_4)))  &kp LG(LC(LS(N5)))  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp LEFT_ARROW   &kp DOWN_ARROW     &kp UP_ARROW      &kp RIGHT_ARROW  &trans            &mt F12 EQUAL
-       &trans           &trans                &trans                    &trans              &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &trans           &mt END PAGE_DOWN  &mt HOME PAGE_UP  &trans           &kp BACKSLASH     &trans
-                                                                        &trans              &trans                &trans                   &trans           &trans             &trans
+&none  &mt TILDE GRAVE  &kp NUMBER_1          &kp NUMBER_2              &kp NUMBER_3        &kp NUMBER_4  &kp N5    &kp NUMBER_6    &kp N7             &kp N8            &kp N9           &kp N0         &none   &none
+       &trans           &kp LS(LG(NUMBER_3))  &kp LG(LC(LS(NUMBER_4)))  &kp LG(LC(LS(N5)))  &none         &none     &kp LEFT_ARROW  &kp DOWN_ARROW     &kp UP_ARROW      &kp RIGHT_ARROW  &trans         &none
+       &trans           &trans                &trans                    &trans              &none         &none     &trans          &mt END PAGE_DOWN  &mt HOME PAGE_UP  &trans           &kp BACKSLASH  &trans
+                                                                        &trans              &trans        &trans    &trans          &trans             &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&trans  &bt BT_CLR_ALL  &trans  &trans  &trans  &mt K_MUTE C_VOL_DN  &kp C_VOLUME_UP    &trans  &trans     &trans     &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-        &kp CAPSLOCK    &trans  &trans  &trans  &trans               &trans             &trans  &kp COLON  &kp EQUAL  &trans  &trans            &trans
-        &trans          &trans  &trans  &trans  &trans               &trans             &trans  &trans     &trans     &trans  &trans            &trans
-                                        &trans  &trans               &trans             &trans  &trans     &trans
+&trans  &none        &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)     &kp LG(N5)         &kp LG(NUMBER_6)  &kp LG(N7)        &kp LG(N8)         &kp LG(N9)  &kp LG(N0)  &none   &trans
+        &kp LG(TAB)  &trans            &trans            &trans            &mt K_MUTE C_VOL_DN  &kp C_VOLUME_UP    &trans            &kp COLON         &kp EQUAL          &trans      &trans      &trans
+        &kp LA(TAB)  &kp LC(Z)         &kp LC(X)         &kp LC(C)         &kp LC(V)            &trans             &trans            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans      &trans      &trans
+                                                         &trans            &trans               &trans             &trans            &trans            &trans
+            >;
+        };
+
+        func {
+            bindings = <
+&trans  &bt BT_CLR_ALL  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &trans
+        &kp CAPS        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &kp F12
+        &trans          &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
+                                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        alt+ {
+            bindings = <
+&trans  &trans       &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(N5)    &kp LA(NUMBER_6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(N0)  &trans  &trans
+        &kp LC(TAB)  &trans            &trans            &trans            &trans            &trans        &trans            &trans      &trans      &trans      &trans      &trans
+        &trans       &trans            &trans            &trans            &trans            &trans        &trans            &trans      &trans      &trans      &trans      &trans
+                                                         &trans            &trans            &trans        &trans            &trans      &trans
+            >;
+        };
+
+        shiiiiiit {
+            bindings = <
+&trans  &trans       &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)    &kp LG(NUMBER_6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(N0)  &trans  &trans
+        &kp LG(TAB)  &trans            &trans            &trans            &trans            &trans        &trans            &trans      &trans      &trans      &trans      &trans
+        &trans       &trans            &trans            &trans            &trans            &trans        &trans            &trans      &trans      &trans      &trans      &trans
+                                                         &trans            &trans            &trans        &trans            &trans      &trans
             >;
         };
     };
