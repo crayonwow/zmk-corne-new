@@ -13,14 +13,9 @@
         compatible = "zmk,combos";
 
         layer3 {
-            bindings = <&tog 3>;
+            bindings = <&mo 3>;
             key-positions = <39 42>;
             timeout-ms = <200>;
-        };
-
-        layer_alt {
-            bindings = <&tog 4>;
-            key-positions = <38 39>;
         };
     };
 
@@ -113,8 +108,8 @@
         layer_2 {
             bindings = <
 &trans  &none        &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)     &kp LG(N5)         &kp LG(NUMBER_6)  &kp LG(N7)        &kp LG(N8)         &kp LG(N9)  &kp LG(N0)  &none   &trans
-        &kp LG(TAB)  &trans            &trans            &trans            &mt K_MUTE C_VOL_DN  &kp C_VOLUME_UP    &trans            &kp COLON         &kp EQUAL          &trans      &trans      &trans
-        &kp LA(TAB)  &kp LC(Z)         &kp LC(X)         &kp LC(C)         &kp LC(V)            &trans             &trans            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans      &trans      &trans
+        &kp LA(TAB)  &trans            &trans            &trans            &mt K_MUTE C_VOL_DN  &kp C_VOLUME_UP    &trans            &kp COLON         &kp EQUAL          &trans      &trans      &trans
+        &none        &kp LC(Z)         &kp LC(X)         &kp LC(C)         &kp LC(V)            &trans             &trans            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans      &trans      &trans
                                                          &trans            &trans               &trans             &trans            &trans            &trans
             >;
         };
@@ -132,15 +127,6 @@
             bindings = <
 &trans  &trans       &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(N5)    &kp LA(NUMBER_6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(N0)  &trans  &trans
         &kp LC(TAB)  &trans            &trans            &trans            &trans            &trans        &trans            &trans      &trans      &trans      &trans      &trans
-        &trans       &trans            &trans            &trans            &trans            &trans        &trans            &trans      &trans      &trans      &trans      &trans
-                                                         &trans            &trans            &trans        &trans            &trans      &trans
-            >;
-        };
-
-        shiiiiiit {
-            bindings = <
-&trans  &trans       &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)    &kp LG(NUMBER_6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(N0)  &trans  &trans
-        &kp LG(TAB)  &trans            &trans            &trans            &trans            &trans        &trans            &trans      &trans      &trans      &trans      &trans
         &trans       &trans            &trans            &trans            &trans            &trans        &trans            &trans      &trans      &trans      &trans      &trans
                                                          &trans            &trans            &trans        &trans            &trans      &trans
             >;
